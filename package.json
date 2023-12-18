@@ -1,0 +1,19 @@
+{
+  "name": "node_js",
+  "version": "1.0.0",
+  "description": "trying a node_js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toshapa/node_js_studying.git"
+  },
+  "author": "AP",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/toshapa/node_js_studying/issues"
+  },
+  "homepage": "https://github.com/toshapa/node_js_studying#readme"
+}
