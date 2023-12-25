@@ -1,6 +1,6 @@
 const fs = require('fs')
 const dns = require('dns')
-const { time } = require('console')
+
 
 const timeStamp = () => {
     return performance.now().toFixed(2)
@@ -37,7 +37,7 @@ process.nextTick( () => info('NextTick 1'))
 setImmediate(()=> info('setImmediate 1'))
 
 dns.lookup('localhost', (err, address, family) => {
-    // info(err)
+    info(err)
     info(address)
     info(family)
     // console.log('DNS 1 localhost', address, timeStamp())
