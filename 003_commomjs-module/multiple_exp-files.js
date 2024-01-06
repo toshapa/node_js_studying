@@ -1,7 +1,7 @@
 const myName = 'Anton'
 const myHobbies = [
     'Video Game on PC',
-    'Cucling on the Bike',
+    'Cycling on the Bike',
     'Learning Programming',
     'Running',
 ]
