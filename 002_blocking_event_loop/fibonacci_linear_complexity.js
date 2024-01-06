@@ -2,7 +2,7 @@ const timeStamp = () => {
     return performance.now().toFixed(2)
 }
 
-function info (text) {
+function info(text) {
     console.log(text, timeStamp())
 }
 
@@ -17,8 +17,8 @@ function fib(n) {
     let fib1 = 0
     let fib2 = 1
     let sum
-    for  (let i = 1; i < n; i++) {
-        sum = fib1 + fib2;
+    for (let i = 1; i < n; i++) {
+        sum = fib1 + fib2
         fib1 = fib2
         fib2 = sum
     }
@@ -28,4 +28,3 @@ function fib(n) {
 console.log(fib(150))
 
 info('Programm end')
-
