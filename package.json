@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/toshapa/node_js_studying#readme",
   "dependencies": {
-    "@types/node": "^20.10.5"
+    "@types/node": "^20.10.5",
+    "latest": "^0.2.0",
+    "nvm": "^0.0.4"
   }
 }
