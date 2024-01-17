@@ -16,15 +16,11 @@ const PORT = 3000
 const myServerEmit = new EventEmitter()
 
 myServerEmit.on('json', async () => {
-    await newFetch()
-        .then((res) => {
-            if (res.length !== 0) {
-                myServerEmit.emit('server')
-            }
-        })
-        .then(() => {
-            console.log(data)
-        })
+    await newFetch().then((res) => {
+        if (res.length !== 0) {
+            myServerEmit.emit('server')
+        }
+    })
 })
 
 myServerEmit.on('server', () => {

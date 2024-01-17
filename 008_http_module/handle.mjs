@@ -13,19 +13,24 @@ function getText(req, res) {
 function getComments(req, res) {
     res.statusCode = 200
     res.setHeader('Content-type', 'application/json')
-    newFetch().then((resp) => {
-        res.end(JSON.stringify(resp))
-    })
+    newFetch()
+        .then((resp) => {
+            res.end(JSON.stringify(resp))
+        })
+        .then(() => console.log(data))
 }
 
 function postComment(req, res) {
     let commentPOST = ''
-
-    req.on('data', (chunk) => (commentPOST += chunk))
+    req.on('data', (chunk) => {
+        commentPOST += chunk
+    })
 
     req.on('end', () => {
         res.statusCode = 200
-        res.end('Comment was received')
+        data.push(JSON.parse(commentPOST))
+        console.log(data)
+        res.end('Data was recieved')
     })
     // return commentPOST
 }
@@ -33,6 +38,7 @@ function postComment(req, res) {
 function getHttp(req, res) {
     res.statusCode = 200
     res.setHeader('Content-type', 'text/html')
+    console.log(data)
     return res.end(
         '<h1 style = "text-align:center">Greetings Anton, HTTP server is alive</h1>'
     )
