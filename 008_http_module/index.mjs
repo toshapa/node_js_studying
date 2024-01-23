@@ -3,12 +3,12 @@ import EventEmitter from 'node:events'
 import {
     getHttp,
     getText,
+    getHome,
     getComments,
     handleNotFound,
     postComment,
 } from './handle.mjs'
 import newFetch from './arrayJSONplaceholder.mjs'
-import data from './data.mjs'
 
 const PORT = 3000
 // let arrayJSON = []
@@ -25,6 +25,9 @@ myServerEmit.on('json', async () => {
 
 myServerEmit.on('server', () => {
     const server = http.createServer((req, res) => {
+        if (req.method === 'GET' && req.url === '/') {
+            return getHome(req, res)
+        }
         if (req.method === 'GET' && req.url === '/http') {
             return getHttp(req, res)
         }

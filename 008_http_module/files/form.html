@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Form for POSTid</title>
+        <style>
+            h1 {
+                text-align: center;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            input[type='number'],
+            input[type='text'],
+            input[type='email'],
+            textarea {
+                font-size: 16px;
+                padding: 10px;
+                margin: 5px;
+                border: 1px solid lightgray;
+                border-radius: 5px;
+                width: 100%;
+                max-width: 500px;
+            }
+            button {
+                color: white;
+                background-color: cornflowerblue;
+                padding: 12px 15px;
+                margin: 10px;
+                cursor: pointer;
+                font-size: 16px;
+                border-radius: 0.5em;
+                border: none;
+            }
+            button:hover {
+                background-color: darkslateblue;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="./comments" method="post">
+            <h1>Your Post</h1>
+
+            <label for="id">Post ID:</label>
+            <input type="number" name="id" id="id" required />
+
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" required />
+
+            <label for="email">Enter your e-mail:</label>
+            <input type="email" name="email" id="email" required />
+
+            <label for="text">Post</label>
+            <textarea name="text" id="text" cols="30" rows="10"></textarea>
+
+            <button type="submit">Send post</button>
+        </form>
+    </body>
+</html>
