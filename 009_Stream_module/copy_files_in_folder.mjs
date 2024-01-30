@@ -1,4 +1,4 @@
-import fs, { write } from 'node:fs'
+import fs from 'node:fs'
 
 const fileName = './files/new3.txt'
 const copyFile = './files/copy_new3.txt'
