@@ -1,0 +1,11 @@
+{
+  "name": "002_multiple_handlers",
+  "version": "1.0.0",
+  "description": "studing_expres",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "AP",
+  "license": "ISC"
+}
