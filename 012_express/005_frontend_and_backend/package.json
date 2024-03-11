@@ -1,0 +1,24 @@
+{
+    "name": "005_frontend_and_backend",
+    "version": "1.0.0",
+    "main": "app.mjs",
+    "scripts": {
+        "start": "node back_end/app.mjs",
+        "dev": "nodemon back_end/app.mjs"
+    },
+    "keywords": [],
+    "author": "AP",
+    "license": "ISC",
+    "dependencies": {
+        "cors": "^2.8.5",
+        "express": "^4.18.2",
+        "npx": "^10.2.2"
+    },
+    "devDependencies": {
+        "@types/express": "^4.17.21",
+        "@types/morgan": "^1.9.9",
+        "morgan": "^1.10.0",
+        "nodemon": "^3.0.3"
+    },
+    "description": ""
+}
